@@ -68,4 +68,20 @@ public class UserServiceImpl implements UserService {
 
 
     }
+
+    @Override
+    public Object getUserAndProductDetailsByUserId(Long userId) throws Exception {
+
+        if (userRepository.existsById(userId)) {
+            return userRepository.getUserAndProductDetailsByUserId(userId);
+        }
+        else {
+
+            throw  new Exception("User not found");
+
+
+        }
+
+
+    }
 }

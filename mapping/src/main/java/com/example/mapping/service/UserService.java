@@ -6,4 +6,6 @@ public interface UserService {
 
 
     Object saveOrUpdate(UserRequest userRequest);
+
+    Object getUserAndProductDetailsByUserId(Long userId) throws Exception;
 }
